@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "multimodal-chat"
+version = "0.1.0"
+description = ""
+authors = ["Christopher Keibel <christopher.keibel.90@gmail.com>"]
+readme = "README.md"
+packages = [{include = "multimodal_chat", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+transformers = "^4.40.1"
+torch = { version = "2.0.0", source="torch"}
+pydantic = "^2.7.1"
+gradio = "^4.29.0"
+fastapi = "^0.111.0"
+accelerate = "0.30.1"
+
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu117"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
